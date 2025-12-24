@@ -1,0 +1,9 @@
+setup.py
+metaerrors/__init__.py
+metaerrors/linux.py
+metaerrors/mac.py
+metaerrors/win.py
+metaerrors.egg-info/PKG-INFO
+metaerrors.egg-info/SOURCES.txt
+metaerrors.egg-info/dependency_links.txt
+metaerrors.egg-info/top_level.txt
