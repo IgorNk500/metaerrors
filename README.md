@@ -1,0 +1,81 @@
+# MetaErrors lib (v1.0)
+### This library redirects errors to popups (supported for Windows, Linux, and MacOs.)
+###### *(Go to [changelog](changelog.md))*
+
+
+## Table of contents
+1. [Installing](#installing)
+2. [Constants and vars](#constants-and-vars)
+3. [Recommended structure](#recommended-structure)
+4. [Functions and syntax](#functions-and-syntax)
+5. [Supporting](#supporting)
+6. [Build](#build)
+
+## Installing
+```bash
+python -m pip install metaerrors
+```
+
+## Constants and vars
+Constants indicate the popup type, and std_title and msg_format indicate the standard title and message format.
+Example of the message format: 
+```python
+msg_format = "{name}: {msg}"
+```
+### Standard values:
+```python
+msg_format = "{name}: {msg}"
+std_title = "The program terminated with the error:" # For metaraise
+```
+
+## Recommended structure
+To redirect your program's errors to **metaraise**,\
+I recommend the following structure:
+```python
+from metaerrors import metaraise
+
+try:
+    #Your program
+except Exception as e:
+    metaraise(e)
+```
+
+## Functions and syntax
+### show()
+```python
+def show(msg: str, title: str, mode: int):
+    """Displays a pop-up"""
+```
+`msg` - your message\
+`title` - title of popup\
+`mode` - display mode (`INFO`, `WARN`, `ERROR`, `STD`)
+### metaraise()
+```python
+def metaraise(err: BaseException, title: str = std_title, frmt: str = msg_format, do_exit: bool = False):
+    """Raise Replacement"""
+```
+`err` - a BaseException type object\
+`title` - title\
+`frmt` - [msg_format](#constants-and-vars)\
+`do_exit` - Determines whether an exit with code 1 will be performed
+### OS modules *(win, mac, linux)* have the same functions.
+
+## Supporting
+> This library is supported for Windows, Linux, and macOS.
+
+***Some functions are not supported by some OS***
+***
+All functions are supported in Windows
+***
+The zenity package does not support the header in Linux, and the notify-send package does not support the pop-up type
+***
+MacOs does not support the pop-up type.
+
+## Build
+**To build the wheel, run:**
+```bash
+python -m pip install setuptools wheel
+python setup.py bdist_wheel
+```
+Don't forget to change the config in the `setup.py` file before doing this.\
+**All wheels are stored in the `dist` folder**

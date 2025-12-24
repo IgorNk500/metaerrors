@@ -1,2 +1,7 @@
 __pycache__/
 .idea/
+
+#Ignoring wheel build folders
+build/
+dist/
+metaerrors.egg-info/

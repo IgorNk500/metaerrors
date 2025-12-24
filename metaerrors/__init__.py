@@ -1,6 +1,6 @@
 """This library redirects errors to popups
 
-This module is optimized for windows, linux, and MacOs.
+This library is supported for Windows, Linux, and macOS.
 
 Constants indicate the popup type, and std_title and msg_format indicate the standard title and message format.
 Example of the message format: {name}: {msg}"""
