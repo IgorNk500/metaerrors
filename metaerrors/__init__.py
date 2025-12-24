@@ -7,9 +7,9 @@ Example of the message format: {name}: {msg}"""
 
 import sys
 
-import linux
-import mac
-import win
+import metaerrors.linux
+import metaerrors.mac
+import metaerrors.win
 
 INFO = 0
 WARN = 1
