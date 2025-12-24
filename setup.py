@@ -3,7 +3,7 @@ from setuptools import setup
 setup(
     name='metaerrors',
     version='r1.0',
-    packages=[''],
+    packages=['metaerrors'],
     url='',
     license='',
     author='IgorNk500',
