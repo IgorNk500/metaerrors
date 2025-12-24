@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='metaerrors',
-    version='r1.0',
+    version='1.0',
     packages=['metaerrors'],
     url='https://github.com/IgorNk500/metaerrors',
     license='',
