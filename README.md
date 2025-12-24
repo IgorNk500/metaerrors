@@ -70,7 +70,7 @@ All functions are supported in Windows
 ***
 The zenity package does not support the header in Linux, and the notify-send package does not support the pop-up type
 ***
-MacOs does not support the pop-up type.
+MacOs does not support the pop-up type (`INFO`, `WARN`, `ERROR`, `STD`).
 
 ## Build
 **To build the wheel, run:**
