@@ -3,7 +3,7 @@ Do not use this module if you do not know the user's target operating system!
 
 It only works with Windows"""
 
-import os
+import subprocess
 
 STD = "0"
 ERROR = "16"
@@ -16,7 +16,10 @@ msg_format = "{name}: {msg}"
 
 def show(msg: str, title: str = std_title, mode: str = STD, disable_output: bool = True):
     """Displays a pop-up"""
-    os.system(f'mshta vbscript:Execute("MsgBox ""{msg}"", {mode}, ""{title}"":close")')
+    subprocess.run(f'mshta vbscript:Execute("MsgBox ""{msg}"", {mode}, ""{title}"":close")', check=True,
+                   capture_output=disable_output,
+                   text=disable_output
+                   )
 
 
 def warn(msg: str, title: str = std_title):

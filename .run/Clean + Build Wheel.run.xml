@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Clean + Build Wheel" type="CompoundRunConfigurationType">
+    <toRun name="Build wheel" type="PythonConfigurationType" />
+    <toRun name="Clear Wheels" type="ShConfigurationType" />
+    <method v="2" />
+  </configuration>
+</component>
