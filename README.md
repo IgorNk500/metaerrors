@@ -79,3 +79,14 @@ python setup.py bdist_wheel
 ```
 Don't forget to change the config in the `setup.py` file before doing this.\
 **All wheels are stored in the `dist` folder**
+
+## Script configurations
+**If your editor supports run configurations (for example, PyCharm), then you will be able to run various scripts:**
++ Clear wheels
++ Del lib
++ Install
++ Build wheel
++ Setup
++ Clean + Build Wheel
+
+# If you encounter any errors, please open issue on GitHub.

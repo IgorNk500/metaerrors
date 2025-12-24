@@ -16,3 +16,4 @@ trim_trailing_whitespace = false
 [*.md]
 indent_style = tab
 trim_trailing_whitespace = false
+insert_final_newline = true
