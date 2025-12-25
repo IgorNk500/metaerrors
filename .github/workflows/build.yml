@@ -9,10 +9,10 @@ env:
 jobs:
   install_dependencies:
         runs-on: ubuntu-latest      
-          steps:
+        steps:
             - uses: actions/checkout@v5
             - uses: actions/setup-python@v6
-            with:
+              with:
                   python-version: '3.13'
                   cache: 'pip'
             - run: python -m pip install setuptools wheel
