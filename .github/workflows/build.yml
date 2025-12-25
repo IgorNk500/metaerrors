@@ -15,7 +15,7 @@ jobs:
             with:
                   python-version: '3.13'
                   cache: 'pip'
-            - run: python -m pip install setuptools
+            - run: python -m pip install setuptools wheel
   build_lib:
     runs-on: ubuntu-latest      
     steps:
