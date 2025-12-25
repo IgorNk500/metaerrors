@@ -1,4 +1,4 @@
-name: build
+name: Build lib
 run-name: build-lib
 on: workflow_call
 
