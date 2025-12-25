@@ -7,6 +7,15 @@ env:
       BUILD_DIR: build
 
 jobs:
+  install_dependencies:
+        runs-on: ubuntu-latest      
+          steps:
+            - uses: actions/checkout@v5
+            - uses: actions/setup-python@v6
+            with:
+                  python-version: '3.13'
+                  cache: 'pip'
+            - run: python -m pip install setuptools
   build_lib:
     runs-on: ubuntu-latest      
     steps:
