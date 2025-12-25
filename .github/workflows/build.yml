@@ -1,6 +1,6 @@
 name: Build lib
 run-name: build-lib
-on: workflow_call
+on: [workflow_call, workflow_dispatch]
 
 env:
       name: builder
