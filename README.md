@@ -17,7 +17,6 @@
 ```bash
 python -m pip install metaerrors
 ```
-*The library is not currently available on PyPi, but it will be soon*
 
 ## Constants and vars
 Constants indicate the popup type, and std_title and msg_format indicate the standard title and message format.
