@@ -39,7 +39,7 @@ jobs:
       - build-lib
     steps:
       - uses: actions/checkout@v4
-      - name: Get wheel filename:
+      - name: Get wheel filename
         run: echo "fn=$(ls dist/)" >> "$GITHUB_ENV"
       - uses: svenstaro/upload-release-action@v2
         with:
