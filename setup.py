@@ -9,6 +9,6 @@ setup(
     url='https://github.com/IgorNk500/metaerrors',
     license='GPL-3.0',
     author='IgorNk500',
-    author_email='https://github.com/IgorNk500',
+    author_email='',
     description='Outputs errors in popups'
 )
