@@ -11,8 +11,9 @@ on:
   release:
     types: [published]
 
+# Get release version
 env:
-  version: none
+  version: $(python -c 'print(open("version.txt").read()[1:])')
 
 jobs:
   build-lib:
@@ -25,8 +26,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
-      - name: Get release version (from version.txt)
-        run: echo "version=$(python -c 'print(open("version.txt").read()[1:])')" >> $GITHUB_ENV
       - name: Build lib from setup.py + build wheel
         run: |
           python -m pip install setuptools wheel
