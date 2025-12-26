@@ -39,6 +39,11 @@ jobs:
       - build-lib
     steps:
       - uses: actions/checkout@v4
+      - name: Retrieve release distributions
+        uses: actions/download-artifact@v4
+        with:
+          name: release-dists
+          path: dist/
       - name: Get wheel filename
         run: echo "fn=$(ls dist/)" >> "$GITHUB_ENV"
       - uses: svenstaro/upload-release-action@v2
