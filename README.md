@@ -1,5 +1,5 @@
 # MetaErrors lib (v1.0)
-### This library redirects errors to popups (supported for Windows, Linux, and MacOs.)
+### This library redirects errors to popups (supported for Windows, Linux, and macOS.)
 ###### *(Go to [changelog](changelog.md))*
 
 
@@ -72,7 +72,7 @@ All functions are supported in Windows
 ***
 The zenity package does not support the header in Linux, and the notify-send package does not support the pop-up type
 ***
-MacOs does not support the pop-up type (`INFO`, `WARN`, `ERROR`, `STD`).
+macOS does not support the pop-up type (`INFO`, `WARN`, `ERROR`, `STD`).
 
 ## Build
 **To build the wheel, run:**

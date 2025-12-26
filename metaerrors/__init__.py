@@ -25,7 +25,6 @@ linux_types = [linux.INFO, linux.WARN, linux.ERROR, linux.STD]
 is_win = sys.platform.startswith("win")
 is_linux = sys.platform.startswith("linux")
 is_mac = sys.platform.startswith("darwin")
-is_not_support = not (is_win or is_linux or is_mac)
 
 
 def show(msg: str, title: str, mode: int):

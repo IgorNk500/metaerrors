@@ -14,7 +14,7 @@ std_format = "{name}: {msg}"
 
 
 def show_simple(msg: str, title: str, disable_output: bool):
-    out = subprocess.run(["notify-send", title, msg], check=True,
+    subprocess.run(["notify-send", title, msg], check=True,
                          capture_output=disable_output,
                          text=disable_output
                          )
@@ -23,7 +23,7 @@ def show_simple(msg: str, title: str, disable_output: bool):
 def show(msg: str, title: str, mode: str = INFO, disable_output: bool = True):
     """Displays a pop-up"""
     try:
-        out = subprocess.run(["zenity", mode, f"--text={msg}"], check=True,
+        subprocess.run(["zenity", mode, f"--text={msg}"], check=True,
                              capture_output=disable_output,
                              text=disable_output)
     except FileNotFoundError:
