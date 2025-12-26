@@ -42,8 +42,8 @@ jobs:
       - uses: svenstaro/upload-release-action@v2
         with:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-          file: dist/metaerrors-$VERSION-py3-none-any.whl
-          asset_name: metaerrors-$VERSION-py3-none-any.whl
+          file: dist/metaerrors-${{ env.version }}-py3-none-any.whl
+          asset_name: metaerrors-${{ env.version }}-py3-none-any.whl
           release_name: ${{ github.event.release.name }}
           overwrite: true
   pypi-publish:
