@@ -48,7 +48,7 @@ jobs:
         run: echo "fn=$(ls dist/)" >> "$GITHUB_ENV"
       - name: Upload release
         uses: svenstaro/upload-release-action@v2
-          with:
+        with:
             repo_token: ${{ secrets.GITHUB_TOKEN }}
             file: dist/${{ env.fn }}
             asset_name: ${{ env.fn }}
