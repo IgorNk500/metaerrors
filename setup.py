@@ -1,8 +1,10 @@
 from setuptools import setup
 
+version = open("version.txt").read()[1:] #Gets the version number
+
 setup(
     name='metaerrors',
-    version='1.0',
+    version=version,
     packages=['metaerrors'],
     url='https://github.com/IgorNk500/metaerrors',
     license='GPL-3.0',
