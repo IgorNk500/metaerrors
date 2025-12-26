@@ -13,7 +13,7 @@ on:
 
 # Get release version
 env:
-  version: $(python -c 'print(open("version.txt").read()[1:])')
+  version: none
 
 jobs:
   build-lib:
@@ -26,6 +26,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
+      - name: Get release version
+        run: echo "VERSION=$(python -c 'print(open("version.txt").read()[1:])')" >> "$GITHUB_OUTPUT"
       - name: Build lib from setup.py + build wheel
         run: |
           python -m pip install setuptools wheel
@@ -36,6 +38,8 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - build-lib
+    env:
+      version: ${{ steps.build-lib.outputs.VERSION }}
     steps:
       - uses: actions/checkout@v4
 
