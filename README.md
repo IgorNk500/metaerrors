@@ -10,6 +10,8 @@
 4. [Functions and syntax](#functions-and-syntax)
 5. [Supporting](#supporting)
 6. [Build](#build)
+7. [Script configurations](#script-configurations)
+8. [Workflows](#workflows)
 
 ## Installing
 ```bash
@@ -90,4 +92,10 @@ Don't forget to change the config in the `setup.py` file before doing this.\
 + Setup
 + Clean + Build Wheel
 
-# If you encounter any errors, please open issue on GitHub.
+## Workflows
+**This project contains one workflow that:**
++ collects the wheel library,
++ adds it to the release files,
++ and uploads the release to PyPi.
+
+# If you encounter any errors, please open [issue](https://github.com/IgorNk500/metaerrors/issues/new "New issue") on GitHub.
