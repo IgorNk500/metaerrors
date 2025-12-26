@@ -12,7 +12,7 @@ setup(
     license='GPL-3.0',
     author='IgorNk500',
     author_email='',
-    description='Outputs errors in popups',
+    description='Outputs exceptions in popups',
     long_description=readme,
     long_description_content_type="text/markdown"
 )
