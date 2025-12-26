@@ -1,5 +1,7 @@
 from setuptools import setup
 
+print("Project info getting from README.md and version.txt")
+
 version = open("version.txt").read()[1:] #Gets the version number
 readme = open("README.md").read() #Gets README.md
 
