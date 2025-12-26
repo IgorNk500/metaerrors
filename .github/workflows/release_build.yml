@@ -1,0 +1,74 @@
+#This package does not use pyproject.toml. Instead, it uses setup.py
+
+#This workflow will collect the wheel library, add it to the release files, and upload the release to PyPi.
+
+#Attention! For this workflow, the wheel version number must match the release tag name!
+name: Build release
+run-name: Building release...
+
+permissions:
+  contents: write
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build-lib:
+    name: Build library
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Build lib from setup.py + build wheel
+        run: |
+          python -m pip install setuptools wheel
+          python setup.py bdist_wheel
+  upload-wheel:
+    #Uploads wheel to the release
+    name: Upload wheel
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: svenstaro/upload-release-action@v2
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          file: dist/metaerrors-${{ github.ref }}-py3-none-any.whl
+          asset_name: metaerrors-${{ github.ref }}-py3-none-any.whl
+          release_name: ${{ github.event.release.name }}
+          overwrite: true
+  pypi-publish:
+    name: PyPi publish
+    runs-on: ubuntu-latest
+    permissions:
+      # IMPORTANT: this permission is mandatory for trusted publishing
+      id-token: write
+
+    # Dedicated environments with protections for publishing are strongly recommended.
+    # For more information, see: https://docs.github.com/en/actions/deployment/targeting-different-environments/using-environments-for-deployment#deployment-protection-rules
+    environment:
+      name: pypi
+      url: https://pypi.org/p/metaerrors
+      # OPTIONAL: uncomment and update to include your PyPI project URL in the deployment status:
+      # url: https://pypi.org/p/YOURPROJECT
+      #
+      # ALTERNATIVE: if your GitHub Release name is the PyPI project version string
+      # ALTERNATIVE: exactly, uncomment the following line instead:
+      # url: https://pypi.org/project/YOURPROJECT/${{ github.event.release.name }}
+
+    steps:
+      - name: Retrieve release distributions
+        uses: actions/download-artifact@v4
+        with:
+          name: release-dists
+          path: dist/
+
+      - name: Publish release distributions to PyPI
+        uses: pypa/gh-action-pypi-publish@release/v1
+        with:
+          packages-dir: dist/
