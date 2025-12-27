@@ -1,5 +1,5 @@
-# MetaErrors lib (v1.1)
-### This library redirects errors to popups (supported for Windows, Linux, and macOS.)
+# MetaErrors lib (v2.0)
+### This library redirects errors to popups (supported for Windows, Linux, macOS and FreeBSD.)
 ###### *(Go to [changelog](https://github.com/IgorNk500/metaerrors/blob/master/changelog.md))*
 
 
@@ -69,9 +69,12 @@ def metaraise(err: BaseException, title: str = std_title, frmt: str = msg_format
 ***
 All functions are supported in Windows
 ***
-The zenity package does not support the header in Linux, and the notify-send package does not support the pop-up type
+The `zenity` package does not support the header in Linux, and the `notify-send` package does not support the pop-up type
 ***
 macOS does not support the pop-up type (`INFO`, `WARN`, `ERROR`, `STD`).
+***
+On FreeBSD, modes only work with the `zenity` package installed.
+***
 
 ## Build
 **To build the wheel, run:**

@@ -4,6 +4,7 @@ Do not use this module if you do not know the user's target operating system!
 It only works with Windows"""
 
 import subprocess
+from metaerrors.tools import frmt_msg
 
 STD = "0"
 ERROR = "16"
@@ -38,5 +39,5 @@ def metaraise(err: BaseException,
               title: str = "The program terminated with the error:",
               frmt: str = msg_format):
     """Raise Replacement"""
-    msg = frmt.format(msg=err.__str__(), name=err.__class__.__name__)
+    msg = frmt_msg(err, frmt)
     show(msg, title, ERROR)

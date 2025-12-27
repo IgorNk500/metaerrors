@@ -8,6 +8,18 @@
   "keywords": ["exceptions", "errors", "popup", "pop-up", "error", "exception", "popups", "pop-ups", "dialog", "window", "dialog window", "dialog windows"],
   "python_requires": ">=3.8.0",
   "classifiers": [
-    "Programming Language :: Python :: 3"
-  ]
+    "Programming Language :: Python :: 3",
+    "Development Status :: 5 - Production/Stable",
+    "Natural Language :: English",
+    "Operating System :: Microsoft :: Windows :: Windows 11",
+    "Operating System :: Microsoft :: Windows :: Windows 10",
+    "Operating System :: Microsoft :: Windows :: Windows 8.1",
+    "Operating System :: Microsoft :: Windows :: Windows 8",
+    "Operating System :: Microsoft :: Windows :: Windows 7",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: BSD :: FreeBSD",
+    "Operating System :: POSIX :: Linux",
+    "Environment :: GPU"
+  ],
+  "platforms": ["Linux", "Windows", "macOS", "FreeBSD"]
 }
