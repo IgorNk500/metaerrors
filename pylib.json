@@ -1,0 +1,13 @@
+{
+  "name": "metaerrors",
+  "url": "https://github.com/IgorNk500/metaerrors",
+  "packages": ["metaerrors"],
+  "license": "MIT",
+  "author": "IgorNk500",
+  "description": "Outputs exceptions in popups",
+  "keywords": ["exceptions", "errors", "popup", "pop-up", "error", "exception", "popups", "pop-ups", "dialog", "window", "dialog window", "dialog windows"],
+  "python_requires": ">=3.8.0",
+  "classifiers": [
+    "Programming Language :: Python :: 3"
+  ]
+}

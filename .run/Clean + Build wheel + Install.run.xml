@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Clean + Build wheel + Install" type="CompoundRunConfigurationType">
+    <toRun name="Clean + Build Wheel" type="CompoundRunConfigurationType" />
+    <toRun name="Install" type="PythonConfigurationType" />
+    <method v="2" />
+  </configuration>
+</component>

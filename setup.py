@@ -1,20 +1,17 @@
+"""This setuptools-based builder uses README.md, version.txt, and pylib.json files to build package metadata."""
+
+import json
 from setuptools import setup
 
-print("Project info getting from README.md and version.txt")
+print("Project info getting from README.md, version.txt and pylib.json")
 
-version = open("version.txt").read()[1:] #Gets the version number
+version = open("version.txt").read()[1:-1] #Gets the version number
 readme = open("README.md").read() #Gets README.md
-
+info = json.load(open("pylib.json"))
 
 setup(
-    name='metaerrors',
     version=version,
-    packages=['metaerrors'],
-    url='https://github.com/IgorNk500/metaerrors',
-    license='GPL-3.0',
-    author='IgorNk500',
-    author_email='',
-    description='Outputs exceptions in popups',
     long_description=readme,
-    long_description_content_type="text/markdown"
+    long_description_content_type="text/markdown",
+    **info
 )
