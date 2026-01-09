@@ -47,6 +47,7 @@ except Exception as e:
 ```python
 def show(msg: str, title: str, mode: int):
     """Displays a pop-up"""
+    ...
 ```
 `msg` - your message\
 `title` - title of popup\
@@ -55,6 +56,7 @@ def show(msg: str, title: str, mode: int):
 ```python
 def metaraise(err: BaseException, title: str = std_title, frmt: str = msg_format, do_exit: bool = False):
     """Raise Replacement"""
+    ...
 ```
 `err` - a BaseException type object\
 `title` - title\
