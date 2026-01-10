@@ -84,7 +84,7 @@ On FreeBSD, modes only work with the `zenity` package installed.
 python -m pip install setuptools wheel
 python setup.py bdist_wheel
 ```
-Don't forget to change the config in the `setup.py` file before doing this.\
+Don't forget to change the config in the `pylib.json` file before doing this.\
 **All wheels are stored in the `dist` folder**
 
 ## Script configurations
@@ -102,4 +102,4 @@ Don't forget to change the config in the `setup.py` file before doing this.\
 + adds it to the release files,
 + and uploads the release to PyPi.
 
-# If you encounter any errors, please open [issue](https://github.com/IgorNk500/metaerrors/issues/new "New issue") on GitHub.
+## If you encounter any errors, please open [issue](https://github.com/IgorNk500/metaerrors/issues/new "New issue") on GitHub.
