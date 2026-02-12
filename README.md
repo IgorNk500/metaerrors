@@ -2,7 +2,11 @@
 ### This library redirects errors to popups (supported for Windows, Linux, macOS and FreeBSD.)
 ###### *(Go to [changelog](https://github.com/IgorNk500/metaerrors/blob/master/changelog.md))*
 
+### WARNING
+A replacement *(`tkinter.messagebox`)* has been found for the library.\
+**The repository will most likely be archived and left as an example of the structure of my libraries.**
 
+***
 ## Table of contents
 1. [Installing](#installing)
 2. [Constants and vars](#constants-and-vars)
