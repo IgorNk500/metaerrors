@@ -1,4 +1,4 @@
-# MetaErrors lib (v2.0)
+# MetaErrors lib (v2.0) ***(ARCHIVED)***
 ### This library redirects errors to popups (supported for Windows, Linux, macOS and FreeBSD.)
 ###### *(Go to [changelog](https://github.com/IgorNk500/metaerrors/blob/master/changelog.md))*
 
